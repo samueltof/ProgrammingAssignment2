@@ -36,7 +36,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # Get inverse from the cache if the inverse of a matrix was calculated but did not changed.
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
-    inv_mat <- x$getInverseMat
+    inv_mat <- x$getInverseMat()
     # Test if it already exists
     if (!is.null(inv_mat)) {
         message('getting cache data')
